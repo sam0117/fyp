@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #head{
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            margin: 0px;
+            left: 0px;
+            height: 100px;
+        }
+        #head a{
+            color: yellow;
+
+        }
+        /* Style the list */
+        ul.breadcrumb {
+            list-style: none;
+            background-color: #eee;
+            height: 70px;
+            margin-bottom: 0px;
+            top: 0px;
+            padding-top: 15px;
+        }
+
+
+        /* Display list items side by side */
+        ul.breadcrumb li {
+            margin-top: 5px;
+            display: inline;
+            font-size: 25px;
+
+        }
+
+        /* Add a slash symbol (/) before/behind each list item */
+        ul.breadcrumb li+li:before {
+            padding: 10px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        /* Add a color to all links inside the list */
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        /* Add a color on mouse-over */
+        ul.breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+<h1 id="head">ARIMA Model <br>
+    <a style="font-size: 20px" href="../Explaination/ARIMA.html">Learn ARIMA</a>
+
+</h1><br><br>
+<br><br>
+<ul class="breadcrumb">
+    <li><a href="ARIMA.html" target="reason">Central</a></li>
+    <li><a href="ARIMATaiPo.html" target="reason">Tai po</a></li>
+    <li><a href="ARIMAYL.html" target="reason">Yuen Long</a></li>
+    <li><a href="#">Summer 15</a></li>
+
+</ul>
+    <div align="left">
+        <iframe name="reason" src="../TestPlan/ARIMA.html"
+                width="100%" height="500px;" style="border: 0px; margin-top: 0px;">
+        </iframe>
+    </div>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* Style the list */
+        ul.breadcrumb {
+            margin-top: 0px;
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #eee;
+
+        }
+
+        /* Display list items side by side */
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 20px;
+        }
+
+        /* Add a slash symbol (/) before/behind each list item */
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        /* Add a color to all links inside the list */
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        /* Add a color on mouse-over */
+        ul.breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+
+ input{
+    width: 200px;
+    height: 50px;
+     font-size: 20px;
+}
+        button {
+
+            border: none;
+
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        button {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+        button:hover {
+            background-color: #555555;
+            color: white;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Copied " );
+        }
+        function change(a) {
+            document.getElementById("myInput").value=a;
+        }
+    </script>
+</head>
+<body>
+<center>
+  <h1>Choose the method</h1>
+<!--change the json path here-->
+
+    <ul class="breadcrumb" >
+        <li><span onclick="change('m')">Multiple Linear Regression </span></li>
+        <li > <span onclick="change('T')">Random Forest</span></li>
+        <li><span onclick="change('random Forest')"> Time Series(ARIMA)</span></li>
+        <li><span onclick="change('ANN')"> ANN</span></li>
+        <li><span onclick="change('M')"> mathematic</span></li>
+    </ul>
+
+    <input type="text" value="Hello World" id="myInput">
+    <button onclick="myFunction()">Copy text</button>
+</center>
+</body>
+</html>

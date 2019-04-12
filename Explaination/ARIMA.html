@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            overflow: scroll;
+        }
+
+         img{
+            width: 350px;
+            height: 100px;
+        }
+ol{
+    margin-left: 25%;
+}
+
+        ol li{
+            margin-left: 0px;
+            text-align: left;
+            color: red;
+            font-size: 25px;
+        }
+        ul li{
+            margin-left: 0px;
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body style="background-color:#eaffb7;">
+
+<h1 style="background-color:rgba(43,225,21,0.59);color: #ff9226">Time Series(ARIMA Model)</h1>
+<center><img style="width: 600px;height: 200px;" src="../photo/Explain/ARIMA/11.png" alt="">
+<p>ARIMA stands for autoregressive integrated moving average</p>
+    <ol>
+        <li>Usally consider the frequency (時段/季度) and time</li>
+        <li>consider the change in frequency (時段/季度) and time to predict the future</li>
+        <li>
+            Include two model
+            <ul>
+                <li>with frequency (時段/季度): ARIMA(P,D,Q)s</li>
+                <li>withOut frequency (時段/季度): ARIMA(p, d, q)</li>
+            </ul>
+        </li>
+        <li>
+            We need to consider the following four paramters
+            <ul>
+                <li><span style="color: red;font-size: 25px"><b> p:</b></span>find out the value in the past affect the value now. <br>
+                ex: the temperature in the past three days are 20 degrees .
+                    <br>
+                we can predict the temperature is 20 degree today.
+                </li>
+                <li><span style="color: red;font-size: 25px"><b> d:</b></span>The change in the past
+                    <br>
+                    ex: the temperature increase rapidly in last three days.
+                    <br>
+                    the probability of temperature increase today is high.
+                </li>
+                <li><span style="color: red;font-size: 25px"><b> q:</b></span>We can set the error rate equal to the difference we observed in the past</li>
+            </ul>
+        </li>
+
+    </ol>
+    
+
+
+
+</body>
+</html>
